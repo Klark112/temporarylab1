@@ -1,0 +1,16 @@
+note weird error second line second memcpy chunck
+1. There would be N floating operations. This is because each element from both arrays must be
+	added so the addition of the first element would be 1 floating point operation and the
+	addition of the nth element from both vectors would be n floating point operations. 
+
+2. 2*N. This is because global memory is read for every element of both vectors so if vector1 
+	has N reads and vector2 has N reads then reading from both will result in N+N or 2N
+	reads.
+
+3. N writes. After reading 2N elements adding them for each pair being added one element has 
+	to be written to vector3.
+
+4. 4*N bytes
+
+5.
+
